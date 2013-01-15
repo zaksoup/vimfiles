@@ -16,7 +16,7 @@
     <div class="wrapper">
       <header>
         <h1>Vimfiles</h1>
-        <p>The Vim Configuration of Champions. Organized.</p>
+        <p>The Vim Configuration.</p>
 
         <p class="view"><a href="https://github.com/luan/vimfiles">View the Project on GitHub <small>luan/vimfiles</small></a></p>
 
@@ -28,7 +28,7 @@
         </ul>
       </header>
       <section>
-        <h1>The Vim Configuration of Champions</h1>
+        <h1>The Vim Configuration.</h1>
 
 <p><a href="http://gitego.com/luan/vimfiles">See vimfiles's Stats on GitEgo</a></p>
 
@@ -49,11 +49,24 @@
 
 <p><strong>MacVim</strong> / <strong>Windows gVim</strong></p>
 
-<p><a href="https://github.com/luan/vimfiles/raw/master/screenshots/MacVim1.png"><img src="https://github.com/luan/vimfiles/raw/master/screenshots/MacVim1_small.png" alt="MacVim"></a> <a href="https://github.com/luan/vimfiles/raw/master/screenshots/Windows1.png"><img src="https://github.com/luan/vimfiles/raw/master/screenshots/Windows1_small.png" alt="Windows gVim"></a></p>
+<p><a href="https://github.com/luan/vimfiles/raw/master/screenshots/mvim.png"><img src="https://github.com/luan/vimfiles/raw/master/screenshots/mvim_small.png" alt="MacVim"></a>
+<a href="https://github.com/luan/vimfiles/raw/master/screenshots/vim.png"><img src="https://github.com/luan/vimfiles/raw/master/screenshots/vim_small.png" alt="Terminal Vim"></a></p>
 
 <h2>Notes</h2>
 
-<p>Be sure to always edit the vimrc using <code>,vi</code>, which opens the vimrc in the .vim folder. Vim has a nasty habit of overriding symlinks.</p>
+<p>Be sure to always edit the vimrc using <code>,vi</code>, which opens the vimrc in the .vim folder. Vim has a nasty habit of overriding symlinks.
+There are two options about the test runner:</p>
+
+<pre><code>" will check for gemfile and run bundle exec if present
+" bundle exec slows down startup so if you can avoid it good
+" 0 or 1, defaults 0
+let g:check_gemfile=1
+
+" will use test server even when on terminal vim
+" default behavior is only when on GUI vim (e.g. mVim or gVim)
+" 0 or 1, defaults 0
+let g:always_use_test_server=1
+</code></pre>
 
 <h2>Plugin Installation / Requirements</h2>
 
@@ -79,6 +92,8 @@
 <a href="https://github.com/Lokaltog/vim-easymotion">vim-easymotion</a> - Vim motions on speed!</li>
 <li>
 <a href="https://github.com/scrooloose/nerdtree">nerdtree</a> - A tree explorer plugin for vim.</li>
+<li>
+<a href="https://github.com/kien/ctrlp.vim">ctrlp.vim</a> - Fuzzy file, buffer, mru, tag, etc finder.</li>
 <li>
 <a href="https://github.com/Lokaltog/vim-powerline">vim-powerline</a> - The ultimate vim statusline utility.</li>
 <li>
@@ -123,9 +138,9 @@
 <li>
 <a href="https://github.com/garbas/vim-snipmate">vim-snipmate</a> - snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim. </li>
 <li>
-<a href="https://github.com/vim-ruby/vim-ruby">vim-ruby</a> - Vim/Ruby Configuration Files</li>
+<a href="https://github.com/camelpunch/test_server">test_server</a> - Send test commands to rspec / cucumber over a named pipe</li>
 <li>
-<a href="https://github.com/tpope/vim-haml">vim-haml</a> - Vim runtime files for Haml, Sass, and SCSS</li>
+<a href="https://github.com/vim-ruby/vim-ruby">vim-ruby</a> - Vim/Ruby Configuration Files</li>
 <li>
 <a href="https://github.com/tpope/vim-rails">vim-rails</a> - rails.vim: Ruby on Rails power tools</li>
 <li>
@@ -160,7 +175,7 @@
 <a href="https://github.com/MarcWeber/vim-addon-mw-utils">vim-addon-mw-utils</a> - vim: interpret a file by function and cache file automatically</li>
 <li>
 <a href="https://github.com/tomtom/tlib_vim">tlib_vim</a> - Some utility functions for VIM</li>
-</ul><p><em>That's 44 plugins.</em></p>
+</ul><p><em>That's 45 plugins, holy crap.</em></p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/luan">luan</a></p>
