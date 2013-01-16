@@ -40,12 +40,21 @@
 <li><code>mv vimfiles .vim</code></li>
 <li><code>cd .vim</code></li>
 <li>
-<code>rake vim:link</code> to make the .vimrc symbolic link.</li>
+<code>rake bootstrap</code> Runs everything you need to get started</li>
 <li>Install <a href="https://github.com/gmarik/vundle">Vundle</a> with <code>git clone http://github.com/gmarik/vundle.git bundle/vundle</code>
 </li>
 <li>Run Vim and type <code>:BundleInstall</code> to install the plugins with Vundle.</li>
 <li>Enjoy enhanced productivity, increased levitation, reduced watermelon-related accidents, and startling sex appeal.</li>
-</ol><h2>Screenshots</h2>
+</ol><h2>Tasks</h2>
+
+<pre><code>rake bootstrap              # Runs everything you need to get started
+rake plugins:compile        # Compile stuff, like Command-T.
+rake plugins:update_readme  # Update the list of plugins in README.md
+rake vim:create_locals      # Create local configs
+rake vim:link               # Create symlinks
+</code></pre>
+
+<h2>Screenshots</h2>
 
 <p><strong>MacVim</strong> / <strong>Windows gVim</strong></p>
 
@@ -67,6 +76,8 @@ let g:check_gemfile=1
 " 0 or 1, defaults 0
 let g:always_use_test_server=1
 </code></pre>
+
+<p>On ~/.vimrc.local.before you can add this line <code>let g:hardcore_mode=0</code> to re-enable the arrow keys if you like them.</p>
 
 <h2>Plugin Installation / Requirements</h2>
 
@@ -138,8 +149,6 @@ let g:always_use_test_server=1
 <li>
 <a href="https://github.com/garbas/vim-snipmate">vim-snipmate</a> - snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim. </li>
 <li>
-<a href="https://github.com/camelpunch/test_server">test_server</a> - Send test commands to rspec / cucumber over a named pipe</li>
-<li>
 <a href="https://github.com/vim-ruby/vim-ruby">vim-ruby</a> - Vim/Ruby Configuration Files</li>
 <li>
 <a href="https://github.com/tpope/vim-rails">vim-rails</a> - rails.vim: Ruby on Rails power tools</li>
@@ -175,7 +184,7 @@ let g:always_use_test_server=1
 <a href="https://github.com/MarcWeber/vim-addon-mw-utils">vim-addon-mw-utils</a> - vim: interpret a file by function and cache file automatically</li>
 <li>
 <a href="https://github.com/tomtom/tlib_vim">tlib_vim</a> - Some utility functions for VIM</li>
-</ul><p><em>That's 45 plugins, holy crap.</em></p>
+</ul><p><em>That's 44 plugins, holy crap.</em></p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/luan">luan</a></p>
