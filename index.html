@@ -1,38 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Vimfiles by luan</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Vimfiles : The Vim Configuration." />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Vimfiles</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Vimfiles</h1>
-        <p>The Vim Configuration.</p>
 
-        <p class="view"><a href="https://github.com/luan/vimfiles">View the Project on GitHub <small>luan/vimfiles</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/luan/vimfiles">View on GitHub</a>
 
+          <h1 id="project_title">Vimfiles</h1>
+          <h2 id="project_tagline">The Vim Configuration.</h2>
 
-        <ul>
-          <li><a href="https://github.com/luan/vimfiles/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/luan/vimfiles/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/luan/vimfiles">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>The Vim Configuration.</h1>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/luan/vimfiles/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/luan/vimfiles/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-<p><a href="http://gitego.com/luan/vimfiles">See vimfiles's Stats on GitEgo</a></p>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="the-vim-configuration" class="anchor" href="#the-vim-configuration"><span class="octicon octicon-link"></span></a>The Vim Configuration.</h1>
 
-<h2>Installation</h2>
+<p><a href="https://bitdeli.com/free" title="Bitdeli Badge"><img src="https://d2weczhvl823v0.cloudfront.net/luan/vimfiles/trend.png" alt="Bitdeli Badge"></a></p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
 <ol>
 <li>
@@ -41,27 +46,29 @@
 <li><code>cd .vim</code></li>
 <li>
 <code>rake bootstrap</code> Runs everything you need to get started</li>
-<li>Install <a href="https://github.com/gmarik/vundle">Vundle</a> with <code>git clone http://github.com/gmarik/vundle.git bundle/vundle</code>
-</li>
-<li>Run Vim and type <code>:BundleInstall</code> to install the plugins with Vundle.</li>
 <li>Enjoy enhanced productivity, increased levitation, reduced watermelon-related accidents, and startling sex appeal.</li>
-</ol><h2>Tasks</h2>
+</ol><h2>
+<a name="tasks" class="anchor" href="#tasks"><span class="octicon octicon-link"></span></a>Tasks</h2>
 
 <pre><code>rake bootstrap              # Runs everything you need to get started
 rake plugins:compile        # Compile stuff, like Command-T.
-rake plugins:update_readme  # Update the list of plugins in README.md
 rake vim:create_locals      # Create local configs
 rake vim:link               # Create symlinks
 </code></pre>
 
-<h2>Screenshots</h2>
+<h2>
+<a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h2>
 
-<p><strong>MacVim</strong> / <strong>Windows gVim</strong></p>
+<p><strong>MacVim</strong></p>
 
-<p><a href="https://github.com/luan/vimfiles/raw/master/screenshots/mvim.png"><img src="https://github.com/luan/vimfiles/raw/master/screenshots/mvim_small.png" alt="MacVim"></a>
-<a href="https://github.com/luan/vimfiles/raw/master/screenshots/vim.png"><img src="https://github.com/luan/vimfiles/raw/master/screenshots/vim_small.png" alt="Terminal Vim"></a></p>
+<p><a href="https://github.com/luan/vimfiles/raw/master/screenshots/mvim.png"><img src="https://github.com/luan/vimfiles/raw/master/screenshots/mvim_small.png" alt="MacVim"></a></p>
 
-<h2>Notes</h2>
+<p><strong>Terminal Vim</strong></p>
+
+<p><a href="https://github.com/luan/vimfiles/raw/master/screenshots/vim.png"><img src="https://github.com/luan/vimfiles/raw/master/screenshots/vim_small.png" alt="Terminal Vim"></a></p>
+
+<h2>
+<a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h2>
 
 <p>Be sure to always edit the vimrc using <code>,vi</code>, which opens the vimrc in the .vim folder. Vim has a nasty habit of overriding symlinks.
 There are two options about the test runner:</p>
@@ -77,121 +84,30 @@ let g:check_gemfile=1
 let g:always_use_test_server=1
 </code></pre>
 
-<p>On ~/.vimrc.local.before you can add this line <code>let g:hardcore_mode=0</code> to re-enable the arrow keys if you like them.</p>
-
-<h2>Plugin Installation / Requirements</h2>
+<h2>
+<a name="plugin-installation--requirements" class="anchor" href="#plugin-installation--requirements"><span class="octicon octicon-link"></span></a>Plugin Installation / Requirements</h2>
 
 <p>I may make this more verbose later, but for now, here's a list of plugins that require further installation:</p>
 
 <ul>
 <li>
-<a href="https://github.com/wincent/Command-T">Command-T</a> Needs compilation.</li>
-<li>
 <a href="https://github.com/tpope/vim-fugitive">Fugitive</a> Requires Git to be installed.</li>
 <li>
 <a href="https://github.com/mileszs/ack.vim">ack.vim</a> Requires <a href="http://betterthangrep.com/">ack</a> to be installed.</li>
-</ul><h2>Plugin List</h2>
-
-<p><em>Note: Auto generated by <code>rake plugins:update_readme</code></em></p>
-
-<ul>
 <li>
-<a href="https://github.com/gmarik/vundle">vundle</a> - Vundle, the plug-in manager for Vim</li>
-<li>
-<a href="https://github.com/wincent/Command-T">Command-T</a> - Mirror of the official Command-T repository at git.wincent.com</li>
-<li>
-<a href="https://github.com/Lokaltog/vim-easymotion">vim-easymotion</a> - Vim motions on speed!</li>
-<li>
-<a href="https://github.com/scrooloose/nerdtree">nerdtree</a> - A tree explorer plugin for vim.</li>
-<li>
-<a href="https://github.com/kien/ctrlp.vim">ctrlp.vim</a> - Fuzzy file, buffer, mru, tag, etc finder.</li>
-<li>
-<a href="https://github.com/Lokaltog/vim-powerline">vim-powerline</a> - The ultimate vim statusline utility.</li>
-<li>
-<a href="https://github.com/chriskempson/vim-tomorrow-theme">vim-tomorrow-theme</a> - Tomorrow Theme for Vim</li>
-<li>
-<a href="https://github.com/altercation/vim-colors-solarized">vim-colors-solarized</a> - precision colorscheme for the vim text editor</li>
-<li>
-<a href="https://github.com/tpope/vim-commentary">vim-commentary</a> - commentary.vim: comment stuff out</li>
-<li>
-<a href="https://github.com/tpope/vim-surround">vim-surround</a> - surround.vim: quoting/parenthesizing made simple</li>
-<li>
-<a href="https://github.com/tpope/vim-fugitive">vim-fugitive</a> - fugitive.vim: a Git wrapper so awesome, it should be illegal</li>
-<li>
-<a href="https://github.com/tpope/vim-abolish">vim-abolish</a> - abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word</li>
-<li>
-<a href="https://github.com/tpope/vim-eunuch">vim-eunuch</a> - eunuch.vim: helpers for UNIX</li>
-<li>
-<a href="https://github.com/godlygeek/tabular">tabular</a> - Vim script for text filtering and alignment</li>
-<li>
-<a href="https://github.com/mileszs/ack.vim">ack.vim</a> - Vim plugin for the Perl module / CLI script 'ack'</li>
-<li>
-<a href="https://github.com/milkypostman/vim-togglelist">vim-togglelist</a> - Functions to toggle the [Location List] and the [Quickfix List] windows.</li>
-<li>
-<a href="https://github.com/tpope/vim-endwise">vim-endwise</a> - endwise.vim: wisely add "end" in ruby, endfunction/endif/more in vim script, etc</li>
-<li>
-<a href="https://github.com/ervandew/supertab">supertab</a> - Perform all your vim insert mode completions with Tab</li>
-<li>
-<a href="https://github.com/gregsexton/MatchTag">MatchTag</a> - Vim's MatchParen for HTML tags</li>
-<li>
-<a href="https://github.com/Shougo/neocomplcache">neocomplcache</a> - Ultimate auto-completion system for Vim.</li>
-<li>
-<a href="https://github.com/tpope/vim-repeat">vim-repeat</a> - repeat.vim: enable repeating supported plugin maps with "."</li>
-<li>
-<a href="https://github.com/Spaceghost/vim-matchit">vim-matchit</a> - A simple mirror of vim-matchit from <a href="https://github.com/mirell" class="user-mention">@mirell</a>
-</li>
-<li>
-<a href="https://github.com/kana/vim-textobj-user">vim-textobj-user</a> - Vim plugin: Support for user-defined text objects</li>
-<li>
-<a href="https://github.com/nelstrom/vim-textobj-rubyblock">vim-textobj-rubyblock</a> - A custom text object for selecting ruby blocks.</li>
-<li>
-<a href="https://github.com/honza/snipmate-snippets">snipmate-snippets</a> - vim-snipmate default snippets</li>
-<li>
-<a href="https://github.com/garbas/vim-snipmate">vim-snipmate</a> - snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim. </li>
-<li>
-<a href="https://github.com/vim-ruby/vim-ruby">vim-ruby</a> - Vim/Ruby Configuration Files</li>
-<li>
-<a href="https://github.com/tpope/vim-rails">vim-rails</a> - rails.vim: Ruby on Rails power tools</li>
-<li>
-<a href="https://github.com/tpope/vim-rake">vim-rake</a> - rake.vim: it's like rails.vim without the rails</li>
-<li>
-<a href="https://github.com/tpope/vim-rvm">vim-rvm</a> - rvm.vim: Switch Ruby versions from inside Vim</li>
-<li>
-<a href="https://github.com/ecomba/vim-ruby-refactoring">vim-ruby-refactoring</a> - Refactoring tool for Ruby in vim!</li>
-<li>
-<a href="https://github.com/tpope/vim-haml">vim-haml</a> - Vim runtime files for Haml, Sass, and SCSS</li>
-<li>
-<a href="https://github.com/nono/vim-handlebars">vim-handlebars</a> - Vim plugin for Handlebars</li>
-<li>
-<a href="https://github.com/othree/html5.vim">html5.vim</a> - HTML5 omnicomplete and syntax</li>
-<li>
-<a href="https://github.com/vim-scripts/indenthtml.vim">indenthtml.vim</a> - alternative html indent script</li>
-<li>
-<a href="https://github.com/pangloss/vim-javascript">vim-javascript</a> - Vastly improved vim's javascript indentation.</li>
-<li>
-<a href="https://github.com/alfredodeza/jacinto.vim">jacinto.vim</a> - Format and validate JSON files</li>
-<li>
-<a href="https://github.com/kchmck/vim-coffee-script">vim-coffee-script</a> - CoffeeScript support for vim</li>
-<li>
-<a href="https://github.com/luan/jasmine.vim">jasmine.vim</a> - Jasmine Plugin for Vim</li>
-<li>
-<a href="https://github.com/mutewinter/vim-css3-syntax">vim-css3-syntax</a> - Add CSS3 syntax support to vim's built-in <code>syntax/css.vim</code>.</li>
-<li>
-<a href="https://github.com/hallison/vim-markdown">vim-markdown</a> - Markdown syntax highlight for Vim editor with snippets support</li>
-<li>
-<a href="https://github.com/vim-scripts/L9">L9</a> - Vim-script library</li>
-<li>
-<a href="https://github.com/MarcWeber/vim-addon-mw-utils">vim-addon-mw-utils</a> - vim: interpret a file by function and cache file automatically</li>
-<li>
-<a href="https://github.com/tomtom/tlib_vim">tlib_vim</a> - Some utility functions for VIM</li>
-</ul><p><em>That's 44 plugins, holy crap.</em></p>
+<a href="https://github.com/rking/ag.vim">ag.vim</a> Requires <a href="https://github.com/ggreer/the_silver_searcher">ag</a> to be installed.</li>
+</ul>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/luan">luan</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Vimfiles maintained by <a href="https://github.com/luan">luan</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -202,6 +118,7 @@ let g:always_use_test_server=1
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
 
   </body>
 </html>
