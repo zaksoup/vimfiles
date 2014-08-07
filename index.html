@@ -2,9 +2,9 @@
 <html>
 
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Vimfiles : The Vim Configuration." />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Vimfiles : The Vim Configuration.">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -36,6 +36,8 @@
 
 <p><a href="https://bitdeli.com/free" title="Bitdeli Badge"><img src="https://d2weczhvl823v0.cloudfront.net/luan/vimfiles/trend.png" alt="Bitdeli Badge"></a></p>
 
+<p>If you're trying to use this config checkout this <a href="https://github.com/luan/vimfiles/wiki/Luan's-Vim-Cheat-Sheet">cheat sheet</a>.</p>
+
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
@@ -45,16 +47,13 @@
 <li><code>mv vimfiles .vim</code></li>
 <li><code>cd .vim</code></li>
 <li>
-<code>rake bootstrap</code> Runs everything you need to get started</li>
+<code>./install</code> Runs everything you need to get started</li>
 <li>Enjoy enhanced productivity, increased levitation, reduced watermelon-related accidents, and startling sex appeal.</li>
 </ol><h2>
-<a name="tasks" class="anchor" href="#tasks"><span class="octicon octicon-link"></span></a>Tasks</h2>
+<a name="install-script" class="anchor" href="#install-script"><span class="octicon octicon-link"></span></a>Install Script</h2>
 
-<pre><code>rake bootstrap              # Runs everything you need to get started
-rake plugins:compile        # Compile stuff, like Command-T.
-rake vim:create_locals      # Create local configs
-rake vim:link               # Create symlinks
-</code></pre>
+<p>The directory contains a bash script named <code>install</code>. <code>install</code> will create your local override files (<code>.vimrc.loca.before</code> and <code>.vimrc.local</code>), symlink <code>.vimrc</code> and <code>.gvimrc</code>.
+It will also install <code>golang</code>'s tools if you have golang on your <code>$PATH</code>.</p>
 
 <h2>
 <a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h2>
@@ -77,11 +76,6 @@ There are two options about the test runner:</p>
 " bundle exec slows down startup so if you can avoid it good
 " 0 or 1, defaults 0
 let g:check_gemfile=1
-
-" will use test server even when on terminal vim
-" default behavior is only when on GUI vim (e.g. mVim or gVim)
-" 0 or 1, defaults 0
-let g:always_use_test_server=1
 </code></pre>
 
 <h2>
