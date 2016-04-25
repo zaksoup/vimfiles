@@ -58,6 +58,7 @@ endif
 runtime! config/lang/elm.vim
 runtime! config/lang/golang.vim
 runtime! config/lang/json.vim
+runtime! config/lang/bash.vim
 runtime! config/lang/rust.vim
 runtime! config/lang/yaml.vim
 
