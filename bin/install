@@ -100,8 +100,8 @@ if which go > /dev/null; then
   echo -e "${green}DONE${end_color}    ${bold}golang${normal} dependencies"
 fi
 
-vim -c 'silent! PlugInstall|qall'
-vim -c 'silent! UpdateRemotePlugins|qall'
-vim -c 'silent! GoInstallBinaries|qall'
+vim -c 'PlugInstall' -c 'qall'
+vim -c 'UpdateRemotePlugins' -c 'qall'
+vim -c 'GoInstallBinaries' -c 'qall'
 
 popd
