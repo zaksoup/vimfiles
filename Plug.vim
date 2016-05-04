@@ -299,10 +299,6 @@ source $HOME/.vimrc.local.plugins
 
 call plug#end()
 
-if has('nvim')
-  call maktaba#json#python#Disable()
-endif
-
 try
   call glaive#Install()
 catch
