@@ -33,7 +33,7 @@ done
 
 brew install neovim/neovim/neovim
 
-ln -s /usr/local/nvim /usr/local/vim
+ln -s /usr/local/bin/nvim /usr/local/bin/vim
 
 brew install python3
 
@@ -108,30 +108,9 @@ if which go > /dev/null; then
   echo -e "${green}DONE${end_color}    ${bold}golang${normal} dependencies"
 fi
 
-vim +'silent! PlugClean!|' +'qall!'
-
-if which nvim > /dev/null; then
-  nvim +'silent! PlugClean!|' +'qall!'
-fi
-
-
-vimcmd=""
-vimcmd=$vimcmd"silent! UpdateRemotePlugins|"
-vimcmd=$vimcmd"silent! PlugInstall|"
-vimcmd=$vimcmd"silent! GoInstallBinaries!|"
-
-if [ $INTERACTIVE == 1 ] ; then
-  vim +"$vimcmd" +'qall!'
-else
-  vim +"$vimcmd" +'qall!' > /dev/null
-fi
-
-if which nvim > /dev/null; then
-  if [ $INTERACTIVE == 1 ] ; then
-    nvim +"$vimcmd" +'qall!'
-  else
-    nvim +"$vimcmd" +'qall!' > /dev/null
-  fi
-fi
+vim -c 'silent! PlugClean! qall'
+vim -c 'silent! PlugInstall qall'
+vim -c 'silent! UpdateRemotePlugins qall'
+vim -c 'silent! GoInstallBinaries qall'
 
 popd
