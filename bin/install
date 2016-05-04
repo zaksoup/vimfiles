@@ -116,12 +116,8 @@ fi
 
 
 vimcmd=""
-vimcmd=$vimcmd"silent! UpdateRemotePlugins!|"
-if [ $UPDATE == 1 ]; then
-  vimcmd=$vimcmd"silent! PlugUpdate!|"
-else
-  vimcmd=$vimcmd"silent! PlugInstall!|"
-fi
+vimcmd=$vimcmd"silent! UpdateRemotePlugins|"
+vimcmd=$vimcmd"silent! PlugInstall|"
 vimcmd=$vimcmd"silent! GoInstallBinaries!|"
 
 if [ $INTERACTIVE == 1 ] ; then
