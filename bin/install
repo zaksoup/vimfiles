@@ -114,7 +114,9 @@ if which nvim > /dev/null; then
   nvim +'silent! PlugClean!|' +'qall!'
 fi
 
+
 vimcmd=""
+vimcmd=$vimcmd"silent! UpdateRemotePlugins!|"
 if [ $UPDATE == 1 ]; then
   vimcmd=$vimcmd"silent! PlugUpdate!|"
 else
