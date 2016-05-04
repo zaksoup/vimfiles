@@ -31,6 +31,12 @@ do
   shift
 done
 
+brew install neovim/neovim/neovim
+
+brew install python3
+
+pip3 install -y neovim
+
 FILES_TO_LINK="vimrc gvimrc"
 LOCALS=".vimrc.local.before .vimrc.local .vimrc.local.plugins"
 
@@ -47,11 +53,9 @@ if [ "$DIR" != "$HOME/.vim" ]; then
   fi
 fi
 
-if which nvim > /dev/null; then
-  mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
-  if [ ! -e $XDG_CONFIG_HOME/nvim ]; then
-    ln -s $DIR $XDG_CONFIG_HOME/nvim
-  fi
+mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+if [ ! -e $XDG_CONFIG_HOME/nvim ]; then
+  ln -s $DIR $XDG_CONFIG_HOME/nvim
 fi
 
 pushd $DIR
@@ -73,21 +77,6 @@ for file in $FILES_TO_LINK; do
     ln -s $DIR/$file $dot_file
   fi
 done
-
-if [ "$(uname)" == "Darwin" ]; then
-  VIM_UPDATE_PATH=/usr/local/bin
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-  VIM_UPDATE_PATH=$HOME/bin
-fi
-
-if [ -L $VIM_UPDATE_PATH/vim-update ]; then
-  rm -f $VIM_UPDATE_PATH/vim-update
-fi
-
-if [ ! -L $VIM_UPDATE_PATH/vim-update ]; then
-  mkdir -p $VIM_UPDATE_PATH
-  ln -s $DIR/bin/update $VIM_UPDATE_PATH/vim-update
-fi
 
 green='\033[0;32m'
 yellow='\033[0;33m'
