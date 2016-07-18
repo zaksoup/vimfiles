@@ -94,3 +94,6 @@ set mousehide  " Hide mouse after chars typed
 set mouse-=a  " Disable all mouseing
 " }}}
 
+" Bosh stuff {{{
+let g:force_bundle_exec=1
+" }}}
